@@ -1,0 +1,54 @@
+Świeżak poziomy od 1 do 5
+Leszcz poziomy od 6 do 15
+Bejc poziomy od 16 do 24
+Tycer poziomy od 25 do 31
+Gnida poziomy od 32 do 38
+Dziurkacz poziomy od 39 do 44
+Flisak poziomy od 45 do 50
+Kupiec poziomy od 51 do 56
+Picer poziomy od 57 do 63
+Git poziomy od 64 do 70
+Omega poziomy od 71 do 78
+Cwaniak poziomy od 79 do 85
+Rzeźnik poziomy od 86 do 91
+Guru poziomy od 92 do 97
+Boss poziomy od 98 i 
+now() + INTERVAL 14 DAY
+//SECOND, MINUTE, HOUER, DAY, WEEK, MONTH, QUARTER, YEAR, 
+<?
+$dataczas = new DataTime('2017-01-01 09:30:15');
+echo: "Data i czas serwera: ".$dataczas->format('Y-m-d H:i:s')."<br>";
+
+
+<? 
+					$dataczas = new DateTime();
+					//echo "Data i czas serwera: ".$dataczas->format('Y-m-d H:i:s')."<br>";
+					$koniec = DateTime::createFromFormat('Y-m-d H:i:s', $_SESSION['tsilka']);
+					$roznica = $dataczas->diff($koniec);
+
+				?>
+				
+				<p>Siłownia</p> <? if($dataczas<$koniec){
+						echo "Pozostało: ".$roznica->format('%d dni, %h godzin, %i min, %s sekund');
+					}
+					else echo "Leć na siłkę, nie ma na co czekać"; ?>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
