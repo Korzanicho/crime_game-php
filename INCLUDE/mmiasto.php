@@ -1,9 +1,0 @@
-<h4 class="tytulzakladki">Miasto</h4>
-<p><a href=bank.php>Bank</a></p>
-<!--<p><a href=#>Papiery wartościowe</a></p>-->
-<p><a href="sklep.php">Sklep</a></p>
-<p><a href=szpital.php>Szpital</a></p>
-<p><a href=#>Metro</a></p>
-<!--<p><a href=#>Aukcje</a></p>-->
-<p><a href=wiezienie.php>Więzienie</a></p>
-<p><a href=#>Prezydent</a>

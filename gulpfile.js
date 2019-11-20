@@ -35,7 +35,7 @@ const sassCompile = function(){
 	}))
 	.pipe(csso())
 	.pipe(sourcemaps.write("."))
-	.pipe(gulp.dest("./css"))
+	.pipe(gulp.dest("./app/css"))
 }
 
 const watch = function(){
