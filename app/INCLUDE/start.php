@@ -104,7 +104,6 @@
 
 			if($sidataczas<$sikoniec){
 				$_SESSION['silkastop'] = true;
-				$_SESSION['odswiezeniesilki']=$siroznica->format('%s')+1;
 				$_SESSION['silka']=$siroznica->format('%i minut, %s sekund');
 			}
 			else {

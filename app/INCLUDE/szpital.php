@@ -25,7 +25,7 @@
 			<?php include("lewypanel.php")?>
         </div>
         
-		<div class='content'>
+		<div class='content hospital'>
 
 		<h1 style="text-align: center;">Szpital</h1>
 		<p>Szpital to miejsce, do którego trafisz gdy ktoś Ci dokopał.
