@@ -48,7 +48,7 @@
 		/**
 		 * Check time to end block
 		 *
-		 * @return DateTime
+		 * @return String
 		 * 
 		 */
 		public function timeToEnd( String $endTime = '' )
@@ -56,8 +56,9 @@
 			if( $this->comparisonTimes( $endTime ) )
 			{
 				$dif = $this->currentTime()->diff($this->endTime($endTime));
-				return $dif->format('%i minut, %s sekund');
+				return $dif->format('%H:%I:%s');
 			}
+			return '00:00';
 		}
 
 		public function blockingAccess($endTime, $variable)

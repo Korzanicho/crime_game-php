@@ -1,16 +1,17 @@
+<?php
+	session_start();
+	require_once('../class/playerAccess.php');
+	require_once('../class/playerAccessTime.php');
+	
+	$playerAccess = new PlayerAccess;
+	$playerAccess->handle(false);
+
+	$accessTime = new PlayerAccessTime;
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	
-	<?php
-	//rozpoczęcie sesji, jeśli niezalogowany, odeślij do indexu
-		session_start();
-		if(!isset($_SESSION['zalogowany'])){
-			header('Location: /index.php');
-			exit();
-		}
-	?>
-
 	<?php 
 		include("head.php");
 	?>
@@ -62,136 +63,14 @@
 				Czas oczekiwania
 			</div>	
 			<div class=content>
-			
-			<?php
-			//CZAS DOSTĘPU WIĘZIENIE
-			$wdataczas = new DateTime();
-			$wkoniec = DateTime::createFromFormat('Y-m-d H:i:s', $_SESSION['twiezienie']);
-			$wroznica = $wdataczas->diff($wkoniec);
-
-			if($wdataczas<$wkoniec){
-				$_SESSION['wiezieniestop'] = true;
-				$_SESSION['odswiezeniewiezienia']=$wroznica->format('%s')+1;
-				$_SESSION['wiezienie']=$wroznica->format('%i minut, %s sekund');
-			}
-			else {
-				$_SESSION['wiezienie']="00:00";
-				$_SESSION['wiezieniestop'] = false;
-			} 
-
-			//CZAS DOSTĘPU SZPITAL
-			$sdataczas = new DateTime();
-			$skoniec = DateTime::createFromFormat('Y-m-d H:i:s', $_SESSION['tszpital']);
-			$sroznica = $sdataczas->diff($skoniec);
-			$_SESSION['szpitalczas'] = $sroznica;
-
-			if($sdataczas<$skoniec){
-				$_SESSION['szpitalstop'] = true;
-				$_SESSION['odswiezenieszpitala']=$sroznica->format('%s')+1;
-				$_SESSION['szpital']=$sroznica->format('%i minut, %s sekund');
-			}
-			else {
-				$_SESSION['szpitalstop'] = false;
-				$_SESSION['szpital']="00:00";
-			} 
-
-
-			//CZAS DOSTĘPU SIŁKA
-			$sidataczas = new DateTime();
-			$sikoniec = DateTime::createFromFormat('Y-m-d H:i:s', $_SESSION['tsilka']);
-			$siroznica = $sidataczas->diff($sikoniec);
-			$_SESSION['silkaczas'] = $siroznica;
-
-			if($sidataczas<$sikoniec){
-				$_SESSION['silkastop'] = true;
-				$_SESSION['silka']=$siroznica->format('%i minut, %s sekund');
-			}
-			else {
-				$_SESSION['silkastop'] = false;
-				$_SESSION['silka']="00:00";
-			} 
-
-			function przestepstwaczas(){
-				//CZAS DOSTĘPU PRZESTĘPSTW
-				$dataczas = new DateTime();
-				$koniec = DateTime::createFromFormat('Y-m-d H:i:s', $_SESSION['tprzestepstwa']);
-				$roznica = $dataczas->diff($koniec);
-				$_SESSION['przestepstwaczas'] = $roznica;
-
-				if($dataczas<$koniec){
-					$_SESSION['przestepstwastop'] = true;
-					$_SESSION['odswiezenieprzestepstw']=$roznica->format('%s')+1;
-					return $_SESSION['przestepstwa']=$roznica->format('%i minut, %s sekund');
-				}
-				else {
-					$_SESSION['przestepstwastop'] = false;
-					return $_SESSION['przestepstwa']="00:00";
-				} 
-			}
-
-
-					//CZAS DOSTĘPU DILERKI
-			function dilerkaczas(){
-				$dataczas = new DateTime();
-				$koniec = DateTime::createFromFormat('Y-m-d H:i:s', $_SESSION['tdilerka']);
-				$roznica = $dataczas->diff($koniec);
-				$_SESSION['dilerkaczas'] = $roznica;
-				
-				if($dataczas<$koniec){
-					$_SESSION['dilerkastop'] = true;
-					$_SESSION['odswiezeniedilerki']=$roznica->format('%s')+1;
-					return	$_SESSION['dilerka']=$roznica->format('%i minut, %s sekund');
-				}
-				else {
-					$_SESSION['dilerkastop'] = false;
-					return $_SESSION['dilerka']="00:00";
-				 } 
-			}
-
-			//CZAS DOSTĘPU PRACY
-			function pracaczas(){
-				$dataczas = new DateTime();
-				$koniec = DateTime::createFromFormat('Y-m-d H:i:s', $_SESSION['tpraca']);
-				$roznica = $dataczas->diff($koniec);
-				$_SESSION['pracaczas'] = $roznica;
-				
-				if($dataczas<$koniec){
-					$_SESSION['pracastop'] = true;
-					$_SESSION['odswiezeniepracy']=$roznica->format('%s')+1;
-					return $_SESSION['praca']=$roznica->format('%i minut, %s sekund');
-				}
-				else {
-					$_SESSION['pracastop'] = false;
-					return $_SESSION['praca']="00:00";
-				 } 
-			}
-
-			//CZAS DOSTĘPU PACZKI
-			function paczkiczas(){
-				$dataczas = new DateTime();
-				$koniec = DateTime::createFromFormat('Y-m-d H:i:s', $_SESSION['tpaczki']);
-				$roznica = $dataczas->diff($koniec);
-				$_SESSION['paczkiczas'] = $roznica;
-				
-				if($dataczas<$koniec){
-					$_SESSION['paczkistop'] = true;
-					return	$_SESSION['paczki']=$roznica->format('%H godzin, %i minut, %s sekund');
-				}
-				else {
-					return	$_SESSION['paczki']="00:00";
-					$_SESSION['paczkistop'] = false;
-				 } 
-			}
-			?>
-				<p>Przestępstwa: <?=przestepstwaczas() ?>
-				<p>Dilerka: <?=dilerkaczas() ?>
-				<p>Siłownia: <?=$_SESSION['silka']?></p> 
-				<p>Praca: <?=pracaczas() ?> </p>
-				<p>Paczki: <?=paczkiczas() ?> </p>
+				<p>Przestępstwa: <?=$accessTime->timeToEnd($_SESSION['tprzestepstwa'])?>
+				<p>Dilerka: <?=$accessTime->timeToEnd($_SESSION['tdilerka'])?>
+				<p>Siłownia: <?=$accessTime->timeToEnd($_SESSION['tsilka'])?></p> 
+				<p>Praca: <?=$accessTime->timeToEnd($_SESSION['tpraca'])?> </p>
+				<p>Paczki: <?=$accessTime->timeToEnd($_SESSION['tpaczki'])?> </p>
 				<br />
-				<p>Więzienie: <?=$_SESSION['wiezienie']?></p>
-				<p>Szpital: <?=$_SESSION['szpital']?></p>
-				
+				<p>Więzienie: <?=$accessTime->timeToEnd($_SESSION['twiezienie'])?></p>
+				<p>Szpital: <?=$accessTime->timeToEnd($_SESSION['tszpital'])?></p>
 			</div>		
 		</div>
 		

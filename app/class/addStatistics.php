@@ -15,9 +15,9 @@
 		 * addStatistic
 		 * 
 		 */
-		private function addStatistic( String $session = '', String $post = '' ): Int
+		private function addStatistic( String $session = '', Int $add = 0 ): Int
 		{
-			$_SESSION[$session] += $_POST[$post];
+			$_SESSION[$session] += $add;
 			return $_SESSION[$session];
 		}
 
@@ -26,10 +26,10 @@
 		 * Check current time
 		 * 
 		 */
-		private function addStatisticToDatabase( String $session = '', String $post = '', 
+		private function addStatisticToDatabase( String $session = '', $add, 
 			String $dbCell = '', $connect, Int $id = 0 )
 		{
-			$value = $this->addStatistic( $session, $post );
+			$value = $this->addStatistic( $session, $add );
 			$query = "UPDATE users SET $dbCell=$value WHERE id=$id ;";
 			$connect->update($query);
 		}
@@ -46,9 +46,9 @@
 		* @param Int $id id of player
 		* 
 		*/
-		public function handle( $session, $post, $dbCell, $connect, $id )
+		public function handle( $session, $add, $dbCell, $connect, $id )
 		{
-			$this->addStatisticToDatabase( $session, $post, $dbCell, $connect, $id );
+			$this->addStatisticToDatabase( $session, $add, $dbCell, $connect, $id );
 		}
 
 	}
