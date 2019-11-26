@@ -25,19 +25,17 @@
 		</div>
 		<div class='content'>
         <?php
-    if(isset($_SESSION['udanarejestracja'])){
-        echo "
-        <h1>Diękujemy Za Rejestrację</h1>
-<p>Właśnie oficjalnie zostałeś bandziorem. Teraz możesz już zalogować 
-się do świata przestępczego. Wykonuj przestępstwa, atakuj innych graczy,
-zarabiaj gruby hajs i co najważniejsze - nie daj się złapać. Powodzenia!
-</p>";
-        unset($_SESSION['udanarejestracja']);
-    }
-   else{
-        header("Location: ./index.php");
-   }
-?>
+			if(isset($_SESSION['udanarejestracja'])){
+				echo 
+					"<h1>Diękujemy Za Rejestrację</h1>
+					<p>Właśnie oficjalnie zostałeś bandziorem. Teraz możesz już zalogować 
+					się do świata przestępczego. Wykonuj przestępstwa, atakuj innych graczy,
+					zarabiaj gruby hajs i co najważniejsze - nie daj się złapać. Powodzenia!
+					</p>";
+				unset($_SESSION['udanarejestracja']);
+			}
+			else header("Location: ./index.php");
+		?>
 		</div>
 		
 		<div class='panel panel--right'>
