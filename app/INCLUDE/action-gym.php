@@ -105,7 +105,7 @@
 					//SIŁA
 					if(isset ($_POST['sila'])){
 						$disableAction->handle('silkastop', $connect, 300, 'tsilka', $_SESSION["id"]);
-						$addStatistic->handle( 'sila', $_POST['sila'], 'sila', $connect, $id );
+						$addStatistic->handle( $_SESSION['sila'], $_POST['sila'], 'sila', $connect, $id );
 						
 						echo "<p class='success'>Gratuluję, dodałeś ".$_POST['sila']." do siły</p>";	
 					}
@@ -113,7 +113,7 @@
 					//OBRONA
 					if(isset ($_POST['obrona'])){
 						$disableAction->handle('silkastop', $connect, 300, 'tsilka', $_SESSION["id"]);
-						$addStatistic->handle( 'obrona', $_POST['obrona'], 'obrona', $connect, $id );
+						$addStatistic->handle( $_SESSION['obrona'], $_POST['obrona'], 'obrona', $connect, $id );
 		
 						echo "<p class='success'> Gratuluję, dodałeś ".$_POST['obrona']." do obrony</p>";
 					}
@@ -121,7 +121,7 @@
 					//SZYBKOŚĆ
 					if(isset ($_POST['szybkosc'])){
 						$disableAction->handle('silkastop', $connect, 300, 'tsilka', $_SESSION["id"]);
-						$addStatistic->handle( 'szybkosc', $_POST['szybkosc'], 'szybkosc', $connect, $id );
+						$addStatistic->handle( $_SESSION['szybkosc'], $_POST['szybkosc'], 'szybkosc', $connect, $id );
 		
 						echo "<p class='success'>Gratuluję, dodałeś ".$_POST['szybkosc']." do szybkości</p>";
 					}

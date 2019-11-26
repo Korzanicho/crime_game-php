@@ -27,7 +27,7 @@
 		 * @return DateTime
 		 * 
 		 */
-		private function endTime( String $endTime = ''): DateTime
+		private function endTime( $endTime )
 		{
 			$endTime = DateTime::createFromFormat('Y-m-d H:i:s', $endTime);
 			return $endTime;
@@ -51,7 +51,7 @@
 		 * @return String
 		 * 
 		 */
-		public function timeToEnd( String $endTime = '' )
+		public function timeToEnd( $endTime )
 		{
 			if( $this->comparisonTimes( $endTime ) )
 			{

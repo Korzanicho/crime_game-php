@@ -1,0 +1,561 @@
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://security.ubuntu.com trusty-security InRelease
+Get:1 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Get:2 http://security.ubuntu.com trusty-security/main Sources [172 kB]
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Get:3 http://archive.ubuntu.com trusty-updates/main Sources [431 kB]
+Get:4 https://esm.ubuntu.com trusty-infra-security InRelease
+Get:5 http://security.ubuntu.com trusty-security/universe Sources [102 kB]
+Get:6 https://esm.ubuntu.com trusty-infra-updates InRelease
+Get:7 https://esm.ubuntu.com trusty-infra-security/main amd64 Packages
+Get:8 http://archive.ubuntu.com trusty-updates/restricted Sources [6,313 B]
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Get:9 https://esm.ubuntu.com trusty-infra-security/main Translation-en_US
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Get:10 https://esm.ubuntu.com trusty-infra-updates/main Translation-en_US
+Get:11 http://archive.ubuntu.com trusty-updates/universe Sources [231 kB]
+Get:12 http://archive.ubuntu.com trusty-updates/multiverse Sources [7,535 B]
+Get:13 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1,177 kB]
+Ign https://esm.ubuntu.com trusty-infra-security/main Translation-en_US
+Ign https://esm.ubuntu.com trusty-infra-security/main Translation-en
+Ign https://esm.ubuntu.com trusty-infra-updates/main Translation-en_US
+Ign https://esm.ubuntu.com trusty-infra-updates/main Translation-en
+Get:14 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.2 kB]
+Get:15 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [525 kB]
+Get:16 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.6 kB]
+Get:17 http://archive.ubuntu.com trusty-updates/main Translation-en [582 kB]
+Get:18 http://archive.ubuntu.com trusty-updates/multiverse Translation-en [7,616 B]
+Get:19 http://archive.ubuntu.com trusty-updates/restricted Translation-en [4,028 B]
+Get:20 http://archive.ubuntu.com trusty-updates/universe Translation-en [281 kB]
+Get:21 http://archive.ubuntu.com trusty-backports/main Sources [9,709 B]
+Get:22 http://archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+Get:23 http://archive.ubuntu.com trusty-backports/universe Sources [35.4 kB]
+Get:24 http://archive.ubuntu.com trusty-backports/multiverse Sources [1,896 B]
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Get:25 http://archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:26 http://archive.ubuntu.com trusty/restricted Sources [5,433 B]
+Get:27 http://archive.ubuntu.com trusty/universe Sources [6,399 kB]
+Get:28 http://archive.ubuntu.com trusty/multiverse Sources [174 kB]
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 11.6 MB in 19s (606 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version.
+The following extra packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+  gitweb git-arch git-bzr git-cvs git-mediawiki git-svn zip
+The following NEW packages will be installed:
+  git git-man liberror-perl unzip
+0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3,616 kB of archives.
+After this operation, 22.4 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.10 [700 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.10 [2,737 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main unzip amd64 6.0-9ubuntu1.5 [157 kB]
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 3,616 kB in 5s (613 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 63238 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17-1.1_all.deb ...
+Unpacking liberror-perl (0.17-1.1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a1.9.1-1ubuntu0.10_all.deb ...
+Unpacking git-man (1:1.9.1-1ubuntu0.10) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a1.9.1-1ubuntu0.10_amd64.deb ...
+Unpacking git (1:1.9.1-1ubuntu0.10) ...
+Selecting previously unselected package unzip.
+Preparing to unpack .../unzip_6.0-9ubuntu1.5_amd64.deb ...
+Unpacking unzip (6.0-9ubuntu1.5) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for mime-support (3.54ubuntu1.1) ...
+Setting up liberror-perl (0.17-1.1) ...
+Setting up git-man (1:1.9.1-1ubuntu0.10) ...
+Setting up git (1:1.9.1-1ubuntu0.10) ...
+Setting up unzip (6.0-9ubuntu1.5) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libxslt1.1 nginx-common nginx-core
+Suggested packages:
+  fcgiwrap nginx-doc
+The following NEW packages will be installed:
+  libxslt1.1 nginx nginx-common nginx-core
+0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 495 kB of archives.
+After this operation, 1,802 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libxslt1.1 amd64 1.1.28-2ubuntu0.2 [146 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-common all 1.4.6-1ubuntu3.9 [18.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-core amd64 1.4.6-1ubuntu3.9 [325 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main nginx all 1.4.6-1ubuntu3.9 [5,418 B]
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 495 kB in 2s (183 kB/s)
+Selecting previously unselected package libxslt1.1:amd64.
+(Reading database ... 64006 files and directories currently installed.)
+Preparing to unpack .../libxslt1.1_1.1.28-2ubuntu0.2_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.28-2ubuntu0.2) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../nginx-common_1.4.6-1ubuntu3.9_all.deb ...
+Unpacking nginx-common (1.4.6-1ubuntu3.9) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../nginx-core_1.4.6-1ubuntu3.9_amd64.deb ...
+Unpacking nginx-core (1.4.6-1ubuntu3.9) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../nginx_1.4.6-1ubuntu3.9_all.deb ...
+Unpacking nginx (1.4.6-1ubuntu3.9) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libxslt1.1:amd64 (1.1.28-2ubuntu0.2) ...
+Setting up nginx-common (1.4.6-1ubuntu3.9) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Setting up nginx-core (1.4.6-1ubuntu3.9) ...
+Setting up nginx (1.4.6-1ubuntu3.9) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.15) ...
+nginx version: nginx/1.4.6 (Ubuntu)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  language-pack-en
+The following NEW packages will be installed:
+  language-pack-en language-pack-en-base
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 486 kB of archives.
+After this operation, 4,468 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main language-pack-en-base all 1:14.04+20160720 [484 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main language-pack-en all 1:14.04+20160720 [1,820 B]
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 486 kB in 1s (451 kB/s)
+Selecting previously unselected package language-pack-en-base.
+(Reading database ... 64066 files and directories currently installed.)
+Preparing to unpack .../language-pack-en-base_1%3a14.04+20160720_all.deb ...
+Unpacking language-pack-en-base (1:14.04+20160720) ...
+Selecting previously unselected package language-pack-en.
+Preparing to unpack .../language-pack-en_1%3a14.04+20160720_all.deb ...
+Unpacking language-pack-en (1:14.04+20160720) ...
+Setting up language-pack-en (1:14.04+20160720) ...
+Setting up language-pack-en-base (1:14.04+20160720) ...
+Generating locales...
+  en_AG.UTF-8... done
+  en_AU.UTF-8... done
+  en_BW.UTF-8... done
+  en_CA.UTF-8... done
+  en_DK.UTF-8... done
+  en_GB.UTF-8... done
+  en_HK.UTF-8... done
+  en_IE.UTF-8... done
+  en_IN.UTF-8... done
+  en_NG.UTF-8... done
+  en_NZ.UTF-8... done
+  en_PH.UTF-8... done
+  en_SG.UTF-8... done
+  en_US.UTF-8... up-to-date
+  en_ZA.UTF-8... done
+  en_ZM.UTF-8... done
+  en_ZW.UTF-8... done
+Generation complete.
+ Co-installable PHP versions: PHP 5.6, PHP 7.x and most requested extensions are included. Only Supported Versions of PHP (http://php.net/supported-versions.php) for Supported Ubuntu Releases (https://wiki.ubuntu.com/Releases) are provided. Don't ask for end-of-life PHP versions or Ubuntu release, they won't be provided.
+
+Debian oldstable and stable packages are provided as well: https://deb.sury.org/#debian-dpa
+
+You can get more information about the packages at https://deb.sury.org
+
+BUGS&FEATURES: This PPA now has a issue tracker:
+https://deb.sury.org/#bug-reporting
+
+CAVEATS:
+1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
+2. If you are using apache2, you are advised to add ppa:ondrej/apache2
+3. If you are using nginx, you are advise to add ppa:ondrej/nginx-mainline
+   or ppa:ondrej/nginx
+
+PLEASE READ: If you like my work and want to give me a little motivation, please consider donating regularly: https://donate.sury.org/
+
+WARNING: add-apt-repository is broken with non-UTF-8 locales, see 
+https://github.com/oerdnj/deb.sury.org/issues/56 for workaround:
+
+# LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+ More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
+gpg: keyring `/tmp/tmpq7miryi6/secring.gpg' created
+gpg: keyring `/tmp/tmpq7miryi6/pubring.gpg' created
+gpg: requesting key E5267A6C from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmpq7miryi6/trustdb.gpg: trustdb created
+gpg: key E5267A6C: public key "Launchpad PPA for Ondřej Surý" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://archive.ubuntu.com trusty-updates InRelease
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Get:1 http://ppa.launchpad.net trusty InRelease [20.9 kB]
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://archive.ubuntu.com trusty-updates/main Sources
+Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://security.ubuntu.com trusty-security/main Sources
+Get:2 http://ppa.launchpad.net trusty/main amd64 Packages [14 B]
+Hit http://archive.ubuntu.com trusty-updates/universe Sources
+Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Get:3 http://ppa.launchpad.net trusty/main Translation-en [14 B]
+Hit https://esm.ubuntu.com trusty-infra-security InRelease
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit https://esm.ubuntu.com trusty-infra-updates InRelease
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit https://esm.ubuntu.com trusty-infra-security/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Get:4 https://esm.ubuntu.com trusty-infra-security/main Translation-en_US
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit https://esm.ubuntu.com trusty-infra-updates/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Get:5 https://esm.ubuntu.com trusty-infra-updates/main Translation-en_US
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Ign https://esm.ubuntu.com trusty-infra-security/main Translation-en_US
+Hit http://archive.ubuntu.com trusty Release
+Ign https://esm.ubuntu.com trusty-infra-security/main Translation-en
+Hit http://archive.ubuntu.com trusty/main Sources
+Ign https://esm.ubuntu.com trusty-infra-updates/main Translation-en_US
+Ign https://esm.ubuntu.com trusty-infra-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 20.9 kB in 3s (6,176 B/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package php7.0-fpm
+E: Couldn't find any package by regex 'php7.0-fpm'
+E: Unable to locate package php7.0-cli
+E: Couldn't find any package by regex 'php7.0-cli'
+E: Unable to locate package php7.0-common
+E: Couldn't find any package by regex 'php7.0-common'
+E: Unable to locate package php7.0-intl
+E: Couldn't find any package by regex 'php7.0-intl'
+E: Unable to locate package php7.0-json
+E: Couldn't find any package by regex 'php7.0-json'
+E: Unable to locate package php7.0-xml
+E: Couldn't find any package by regex 'php7.0-xml'
+E: Unable to locate package php7.0-zip
+E: Couldn't find any package by regex 'php7.0-zip'
+E: Unable to locate package php7.0-bz2
+E: Couldn't find any package by regex 'php7.0-bz2'
+E: Unable to locate package php7.0-opcache
+E: Couldn't find any package by regex 'php7.0-opcache'
+E: Unable to locate package php7.0-mysql
+E: Couldn't find any package by regex 'php7.0-mysql'
+E: Unable to locate package php7.0-curl
+E: Couldn't find any package by regex 'php7.0-curl'
+E: Unable to locate package php7.0-readline
+E: Couldn't find any package by regex 'php7.0-readline'
+/tmp/vagrant-shell: line 56: php: command not found
+cp: cannot create regular file ‘/etc/php/7.0/fpm/php-fpm.conf’: No such file or directory
+cp: cannot create regular file ‘/etc/php/7.0/fpm/php.ini’: No such file or directory
+ * Restarting nginx nginx
+   ...done.
+php7.0-fpm: unrecognized service
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libaio1 libdbd-mysql-perl libdbi-perl libhtml-template-perl libmysqlclient18
+  libterm-readkey-perl mysql-client-5.6 mysql-client-core-5.6 mysql-common
+  mysql-common-5.6 mysql-server-core-5.6
+Suggested packages:
+  libclone-perl libmldbm-perl libnet-daemon-perl libplrpc-perl
+  libsql-statement-perl libipc-sharedcache-perl mailx tinyca
+The following NEW packages will be installed:
+  libaio1 libdbd-mysql-perl libdbi-perl libhtml-template-perl libmysqlclient18
+  libterm-readkey-perl mysql-client-5.6 mysql-client-core-5.6 mysql-common
+  mysql-common-5.6 mysql-server-5.6 mysql-server-core-5.6
+0 upgraded, 12 newly installed, 0 to remove and 0 not upgraded.
+Need to get 21.6 MB of archives.
+After this operation, 167 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libaio1 amd64 0.3.109-4 [6,364 B]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-common all 5.5.62-0ubuntu0.14.04.1 [12.6 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libmysqlclient18 amd64 5.5.62-0ubuntu0.14.04.1 [598 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libdbi-perl amd64 1.630-1 [879 kB]
+Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libdbd-mysql-perl amd64 4.025-1ubuntu0.1 [87.6 kB]
+Get:6 http://archive.ubuntu.com/ubuntu/ trusty/main libterm-readkey-perl amd64 2.31-1 [27.4 kB]
+Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-client-core-5.6 amd64 5.6.33-0ubuntu0.14.04.1 [4,133 kB]
+Get:8 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-client-5.6 amd64 5.6.33-0ubuntu0.14.04.1 [5,555 kB]
+Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-server-core-5.6 amd64 5.6.33-0ubuntu0.14.04.1 [4,620 kB]
+Get:10 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-server-5.6 amd64 5.6.33-0ubuntu0.14.04.1 [5,602 kB]
+Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main libhtml-template-perl all 2.95-1 [65.5 kB]
+Get:12 http://archive.ubuntu.com/ubuntu/ trusty-updates/universe mysql-common-5.6 all 5.6.33-0ubuntu0.14.04.1 [12.0 kB]
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 21.6 MB in 9s (2,180 kB/s)
+Selecting previously unselected package libaio1:amd64.
+(Reading database ... 64707 files and directories currently installed.)
+Preparing to unpack .../libaio1_0.3.109-4_amd64.deb ...
+Unpacking libaio1:amd64 (0.3.109-4) ...
+Selecting previously unselected package mysql-common.
+Preparing to unpack .../mysql-common_5.5.62-0ubuntu0.14.04.1_all.deb ...
+Unpacking mysql-common (5.5.62-0ubuntu0.14.04.1) ...
+Selecting previously unselected package libmysqlclient18:amd64.
+Preparing to unpack .../libmysqlclient18_5.5.62-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking libmysqlclient18:amd64 (5.5.62-0ubuntu0.14.04.1) ...
+Selecting previously unselected package libdbi-perl.
+Preparing to unpack .../libdbi-perl_1.630-1_amd64.deb ...
+Unpacking libdbi-perl (1.630-1) ...
+Selecting previously unselected package libdbd-mysql-perl.
+Preparing to unpack .../libdbd-mysql-perl_4.025-1ubuntu0.1_amd64.deb ...
+Unpacking libdbd-mysql-perl (4.025-1ubuntu0.1) ...
+Selecting previously unselected package libterm-readkey-perl.
+Preparing to unpack .../libterm-readkey-perl_2.31-1_amd64.deb ...
+Unpacking libterm-readkey-perl (2.31-1) ...
+Selecting previously unselected package mysql-client-core-5.6.
+Preparing to unpack .../mysql-client-core-5.6_5.6.33-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking mysql-client-core-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+Selecting previously unselected package mysql-client-5.6.
+Preparing to unpack .../mysql-client-5.6_5.6.33-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking mysql-client-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+Selecting previously unselected package mysql-server-core-5.6.
+Preparing to unpack .../mysql-server-core-5.6_5.6.33-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking mysql-server-core-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up mysql-common (5.5.62-0ubuntu0.14.04.1) ...
+Selecting previously unselected package mysql-server-5.6.
+(Reading database ... 65079 files and directories currently installed.)
+Preparing to unpack .../mysql-server-5.6_5.6.33-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking mysql-server-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+Selecting previously unselected package libhtml-template-perl.
+Preparing to unpack .../libhtml-template-perl_2.95-1_all.deb ...
+Unpacking libhtml-template-perl (2.95-1) ...
+Selecting previously unselected package mysql-common-5.6.
+Preparing to unpack .../mysql-common-5.6_5.6.33-0ubuntu0.14.04.1_all.deb ...
+Unpacking mysql-common-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libaio1:amd64 (0.3.109-4) ...
+Setting up libmysqlclient18:amd64 (5.5.62-0ubuntu0.14.04.1) ...
+Setting up libdbi-perl (1.630-1) ...
+Setting up libdbd-mysql-perl (4.025-1ubuntu0.1) ...
+Setting up libterm-readkey-perl (2.31-1) ...
+Setting up mysql-client-core-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+Setting up mysql-client-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+Setting up mysql-server-core-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+Setting up mysql-server-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+[1;24r(B)0[m[1;24r[H[J[1;1H[7m                                                                                [2;1H                                                                                [3;1H                                                                                [4;1H                                                                                [5;1H                                                                                [6;1H                                                                                [7;1H                                                                                [8;1H                                                                                [9;1H                                                                                [10;1H                                                                                [11;1H                                                                                [12;1H                                                                                [13;1H                                                                                [14;1H                                                                                [15;1H                                                                                [16;1H                                                                                [17;1H                                                                                [18;1H                                                                                [19;1H                                                                                [20;1H                                                                                [21;1H                                                                                [22;1H                                                                                [23;1H                                                                                [24;1H                                                                               [1;1HPackage configuration[6;3H┌────────────────────┤ Configuring mysql-server-5.6 ├─────────────────────┐[7;3H│ While not mandatory, it is highly recommended that you set a password   │[8;3H│ for the MySQL administrative "root" user.[31C│[9;3H│[73C│[10;3H│ If this field is left blank, the password will not be changed.[10C│[11;3H│[73C│[12;3H│ New password for the MySQL "root" user:[33C│[13;3H│[73C│[14;3H│ _______________________________________________________________________ │[15;3H│[73C│[16;3H│[33C<Ok>[36C│[17;3H│[73C│[18;3H└─────────────────────────────────────────────────────────────────────────┘[14;5HFailed to open terminal.debconf: whiptail output the above errors, giving up!
+dpkg: error processing package mysql-server-5.6 (--configure):
+ subprocess installed post-installation script returned error exit status 255
+Setting up libhtml-template-perl (2.95-1) ...
+Setting up mysql-common-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.15) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Errors were encountered while processing:
+ mysql-server-5.6
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+mysql  Ver 14.14 Distrib 5.6.33, for debian-linux-gnu (x86_64) using  EditLine wrapper
+Enter password: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+Enter password: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+Enter password: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+Enter password: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+Enter password: ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+stop: Unknown instance: 
+start: Job failed to start
+Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package linux-image-extra-3.13.0-170-generic
+E: Couldn't find any package by regex 'linux-image-extra-3.13.0-170-generic'
+Reading package lists...
+Building dependency tree...
+Reading state information...
+apt-transport-https is already the newest version.
+ca-certificates is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+1 not fully installed or removed.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] Abort.
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.oCZovjrIdX --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyring /etc/apt/trusted.gpg.d/ondrej-php.gpg --keyring /etc/apt/trusted.gpg.d/ubuntu-advantage-esm-infra-trusty.gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+gpg: requesting key 2C52609D from hkp server ha.pool.sks-keyservers.net
+gpg: key 2C52609D: public key "Docker Release Tool (releasedocker) <docker@docker.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+deb https://apt.dockerproject.org/repo ubuntu-trusty main
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://ppa.launchpad.net trusty InRelease
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://archive.ubuntu.com trusty-updates InRelease
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/main Sources
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://ppa.launchpad.net trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Sources
+Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit https://esm.ubuntu.com trusty-infra-security InRelease
+Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit https://esm.ubuntu.com trusty-infra-updates InRelease
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit https://esm.ubuntu.com trusty-infra-security/main amd64 Packages
+Get:1 https://apt.dockerproject.org ubuntu-trusty/main Translation-en_US
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Get:2 https://esm.ubuntu.com trusty-infra-security/main Translation-en_US
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit https://esm.ubuntu.com trusty-infra-updates/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Get:3 https://esm.ubuntu.com trusty-infra-updates/main Translation-en_US
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Hit http://archive.ubuntu.com trusty/main Sources
+Ign https://esm.ubuntu.com trusty-infra-security/main Translation-en_US
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Ign https://esm.ubuntu.com trusty-infra-security/main Translation-en
+Hit http://archive.ubuntu.com trusty/universe Sources
+Ign https://esm.ubuntu.com trusty-infra-updates/main Translation-en_US
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Ign https://esm.ubuntu.com trusty-infra-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign https://apt.dockerproject.org ubuntu-trusty/main Translation-en_US
+Ign https://apt.dockerproject.org ubuntu-trusty/main Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 55.7 kB in 3s (16.0 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  aufs-tools cgroup-lite libsystemd-journal0
+The following NEW packages will be installed:
+  aufs-tools cgroup-lite docker-engine libsystemd-journal0
+0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+1 not fully installed or removed.
+Need to get 19.3 MB of archives.
+After this operation, 92.9 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libsystemd-journal0 amd64 204-5ubuntu20.31 [50.5 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty/universe aufs-tools amd64 1:3.2+20130722-1.1 [92.3 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main cgroup-lite all 1.9 [3,918 B]
+dpkg-preconfigure: unable to re-open stdin: No such file or directory
+Fetched 19.3 MB in 2s (9,335 kB/s)
+Selecting previously unselected package libsystemd-journal0:amd64.
+(Reading database ... 65179 files and directories currently installed.)
+Preparing to unpack .../libsystemd-journal0_204-5ubuntu20.31_amd64.deb ...
+Unpacking libsystemd-journal0:amd64 (204-5ubuntu20.31) ...
+Selecting previously unselected package aufs-tools.
+Preparing to unpack .../aufs-tools_1%3a3.2+20130722-1.1_amd64.deb ...
+Unpacking aufs-tools (1:3.2+20130722-1.1) ...
+Selecting previously unselected package docker-engine.
+Preparing to unpack .../docker-engine_17.05.0~ce-0~ubuntu-trusty_amd64.deb ...
+Unpacking docker-engine (17.05.0~ce-0~ubuntu-trusty) ...
+Selecting previously unselected package cgroup-lite.
+Preparing to unpack .../cgroup-lite_1.9_all.deb ...
+Unpacking cgroup-lite (1.9) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mysql-server-5.6 (5.6.33-0ubuntu0.14.04.1) ...
+[1;24r(B)0[m[1;24r[H[J[1;1H[7m                                                                                [2;1H                                                                                [3;1H                                                                                [4;1H                                                                                [5;1H                                                                                [6;1H                                                                                [7;1H                                                                                [8;1H                                                                                [9;1H                                                                                [10;1H                                                                                [11;1H                                                                                [12;1H                                                                                [13;1H                                                                                [14;1H                                                                                [15;1H                                                                                [16;1H                                                                                [17;1H                                                                                [18;1H                                                                                [19;1H                                                                                [20;1H                                                                                [21;1H                                                                                [22;1H                                                                                [23;1H                                                                                [24;1H                                                                               [1;1HPackage configuration[6;3H┌────────────────────┤ Configuring mysql-server-5.6 ├─────────────────────┐[7;3H│ While not mandatory, it is highly recommended that you set a password   │[8;3H│ for the MySQL administrative "root" user.[31C│[9;3H│[73C│[10;3H│ If this field is left blank, the password will not be changed.[10C│[11;3H│[73C│[12;3H│ New password for the MySQL "root" user:[33C│[13;3H│[73C│[14;3H│ _______________________________________________________________________ │[15;3H│[73C│[16;3H│[33C<Ok>[36C│[17;3H│[73C│[18;3H└─────────────────────────────────────────────────────────────────────────┘[14;5H[24;1H[m[m                                                                               Failed to open terminal.debconf: whiptail output the above errors, giving up!
+dpkg: error processing package mysql-server-5.6 (--configure):
+ subprocess installed post-installation script returned error exit status 255
+Setting up libsystemd-journal0:amd64 (204-5ubuntu20.31) ...
+Setting up aufs-tools (1:3.2+20130722-1.1) ...
+Setting up docker-engine (17.05.0~ce-0~ubuntu-trusty) ...
+docker start/running, process 10105
+Setting up cgroup-lite (1.9) ...
+cgroup-lite start/running
+Processing triggers for libc-bin (2.19-0ubuntu6.15) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Errors were encountered while processing:
+ mysql-server-5.6
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+groupadd: group 'docker' already exists
+Docker version 17.05.0-ce, build 89658be
+docker stop/waiting
+docker start/running, process 10322
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   617    0   617    0     0    936      0 --:--:-- --:--:-- --:--:--   937
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  3 7857k    3  287k    0     0   163k      0  0:00:47  0:00:01  0:00:46  309k 73 7857k   73 5747k    0     0  2100k      0  0:00:03  0:00:02  0:00:01 3009k100 7857k  100 7857k    0     0  2672k      0  0:00:02  0:00:02 --:--:-- 3716k
+docker-compose version 1.9.0, build 2585387

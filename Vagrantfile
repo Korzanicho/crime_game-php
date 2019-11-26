@@ -1,7 +1,3 @@
-Learn more or give us feedback
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
 # Specify minimum Vagrant version and Vagrant API version
 Vagrant.require_version ">= 1.6.0"
 VAGRANTFILE_API_VERSION = "2"

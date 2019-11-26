@@ -32,21 +32,23 @@
 			$money = rand(0, $maxMoney);
 			$progress = rand(0, $maxProgress);
 			$addStatistics = new AddStatistics;
-			$addStatistics->handle('hajs', $money, 'hajs', $connect, $id);
+			$addStatistics->handle($_SESSION['hajs'], $money, 'hajs', $connect, $id);
+			$addStatistics->handle($_SESSION['progress'], $progress, 'hajs', $connect, $id);
 			echo "<p class='success'>Udało Ci się, zyskałeś $money PLN i $progress do szacunku</p>";
 		}
 
 		public function playerLose( Int $time = 0, $connect ): void
 		{
 			$id = $_SESSION["id"];
+
 			$query = "UPDATE users SET twiezienie=now()+INTERVAL $time SECOND WHERE id=$id ;";
-			$update = mysqli_query( $connect, $query );
-			$timeToEnd = mysqli_query($connect, "SELECT twiezienie FROM users WHERE id=$id");
-			$row = mysqli_fetch_array($timeToEnd);
-			$_SESSION['twiezienie'] = $row['twiezienie'];
+
+			$connect->update($query);
+			$timeToEnd = $connect->select("SELECT twiezienie FROM users WHERE id=$id");
+			$_SESSION['twiezienie'] = $timeToEnd['twiezienie'];
 
 			$_SESSION['wiezieniestop1']=true;
-			echo "<p class='lose'>Trafiasz do więzienia na ".$time." minut!</p>";
+			echo "<p class='lose'>Trafiasz do więzienia na ".$time." sekund!</p>";
 		}
 
 

@@ -17,8 +17,8 @@
 		 */
 		private function addStatistic( String $session = '', Int $add = 0 ): Int
 		{
-			$_SESSION[$session] += $add;
-			return $_SESSION[$session];
+			$session += $add;
+			return $session;
 		}
 
 		/**
