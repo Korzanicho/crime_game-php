@@ -11,7 +11,7 @@ $playerBlockingAccess = new PlayerAccess;
 $playerBlockingAccess->handle(true);
 $crime = new ActionCrime;
 $crimeAccessTime = new PlayerAccessTime;	
-$crimeAccessTime->blockingAccess($_SESSION['tsilka'], 'silkastop');
+$crimeAccessTime->blockingAccess($_SESSION['tprzestepstwa'], 'silkastop');
 
 ?>
 <!DOCTYPE html>
@@ -97,7 +97,21 @@ $crimeAccessTime->blockingAccess($_SESSION['tsilka'], 'silkastop');
                     </td>
                     <td>
                     <?php
-                        echo $crime->calculateChance(3500, $_SESSION['progress']).'%'   
+                        echo $crime->calculateChance(1500, $_SESSION['progress']).'%'   
+                    ?>      
+                    </td>   
+                </tr>
+                <tr>
+                    <td>Obrabuj dziadka metodą na wnuczka</td>
+                    <td>
+                        <form method=POST>
+                            <input name=crime value=5 type=hidden />
+                            <input src="../img/ok.gif" type=image />
+                        </form>
+                    </td>
+                    <td>
+                    <?php
+                        echo $crime->calculateChance(2500, $_SESSION['progress']).'%'   
                     ?>      
                     </td>   
                 </tr>
@@ -152,19 +166,6 @@ $crimeAccessTime->blockingAccess($_SESSION['tsilka'], 'silkastop');
                     break;
                     /////////////////////////////PRZESTĘPSTWO 2/////////////////////////
                 case 2:
-
-                function wygrana(){
-                    $hajs=rand(11,20);
-                    $progress=rand(11,20);
-                    $id =  $_SESSION['id'];
-                    echo "<p class='success'>Udało Ci się, zyskałeś $hajs PLN i $progress do szacunku</p>";
-                    $_SESSION['progress']+=$progress;
-                    $_SESSION['hajs']+=$hajs;
-                    $prog=$_SESSION['progress'];
-                    $twojhajs=$_SESSION['hajs'];
-                    $kwerenda = "UPDATE users SET progress=$prog, hajs=$twojhajs  WHERE id=$id ;";
-                    $update = mysqli_query( $connect, $kwerenda);
-                }
 
                 function przegrana(){
                     $czas=5; //minuty
@@ -225,6 +226,13 @@ $crimeAccessTime->blockingAccess($_SESSION['tsilka'], 'silkastop');
                     $crime->playerWin(300, 300, $connect, $_SESSION['id']);
                 }
                 else przegrana();
+                break;
+                  case 5:
+  
+                if($crime->checkIfPlayerWin(12500, $_SESSION['progress'])){
+                    $crime->playerWin(600, 600, $connect, $_SESSION['id']);
+                }
+                else $crime->playerLose(30, $connect);
                 break;
             }
         }
