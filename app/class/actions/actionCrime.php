@@ -37,19 +37,19 @@
 			echo "<p class='success'>Udało Ci się, zyskałeś $money PLN i $progress do szacunku</p>";
 		}
 
-		public function playerLose( Int $time = 0, $connect ): void
-		{
-			$id = $_SESSION["id"];
+		// public function playerLose( Int $time = 0, $connect ): void
+		// {
+		// 	$id = $_SESSION["id"];
 
-			$query = "UPDATE users SET twiezienie=now()+INTERVAL $time SECOND WHERE id=$id ;";
+		// 	$query = "UPDATE users SET twiezienie=now()+INTERVAL $time SECOND WHERE id=$id ;";
 
-			$connect->update($query);
-			$timeToEnd = $connect->select("SELECT twiezienie FROM users WHERE id=$id");
-			$_SESSION['twiezienie'] = $timeToEnd['twiezienie'];
+		// 	$connect->update($query);
+		// 	$timeToEnd = $connect->select("SELECT twiezienie FROM users WHERE id=$id");
+		// 	$_SESSION['twiezienie'] = $timeToEnd['twiezienie'];
 
-			$_SESSION['wiezieniestop1']=true;
-			echo "<p class='lose'>Trafiasz do więzienia na ".$time." sekund!</p>";
-		}
+		// 	$_SESSION['wiezieniestop']=true;
+		// 	echo "<p class='lose'>Trafiasz do więzienia na ".$time." sekund!</p>";
+		// }
 
 
 	}

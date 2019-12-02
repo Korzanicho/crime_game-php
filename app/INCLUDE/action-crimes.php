@@ -5,6 +5,7 @@ require_once('../class/playerAccess.php');
 require_once('../class/actions/actionCrime.php');
 require_once('../class/disableActions.php');
 require_once('../class/playerAccessTime.php');
+require_once('../class/moveToPrison.php');
 
 $disableAction = new BlockAction;
 
@@ -15,6 +16,8 @@ $crime = new ActionCrime;
 $crimeAccessTime = new PlayerAccessTime;	
 $crimeAccessTime->blockingAccess($_SESSION['tprzestepstwa'], 'przestepstwastop');
 
+$moveToPrison = new MoveToPrison;
+
 $crimes = [
     [
         'slug'         => 'ukradnij_batonik',
@@ -24,23 +27,23 @@ $crimes = [
         'penaltyTime'  => 30
     ],
     [
-        'slug'      => 'obrabuj_zebraka',
-        'name'      => 'Obrabuj żebraka', 
-        'chance'    => 540,
+        'slug'         => 'obrabuj_zebraka',
+        'name'         => 'Obrabuj żebraka', 
+        'chance'       => 540,
         'maxReward'    => 20,
         'penaltyTime'  => 30
     ],
     [
-        'slug'      => 'torebka_starszej_pani',
-        'name'      => 'Zabierz torebkę starszej pani', 
-        'chance'    => 800,
+        'slug'         => 'torebka_starszej_pani',
+        'name'         => 'Zabierz torebkę starszej pani', 
+        'chance'       => 800,
         'maxReward'    => 30,
         'penaltyTime'  => 30
     ],
     [
-        'slug'  => 'ukradnij_cole_z_kebaba',
-        'name' => 'Ukradnij Colę z kebaba', 
-        'chance' => 1500,
+        'slug'         => 'ukradnij_cole_z_kebaba',
+        'name'         => 'Ukradnij Colę z kebaba', 
+        'chance'       => 1500,
         'maxReward'    => 300,
         'penaltyTime'  => 30
     ],
@@ -100,7 +103,7 @@ $crimes = [
                                 <td>{$currentCrime['name']}</td>
                                 <td>                                
                                     <form method='POST'>
-                                        <input name='crime' value={$currentCrime['slug']} type=hidden />
+                                        <input name='crime' value={$currentCrime['slug']} type='hidden' />
                                         <input src='../img/ok.gif' type=image />
                                     </form>
                                 </td>
@@ -134,7 +137,7 @@ $crimes = [
                                 if($crime->checkIfPlayerWin($currentCrime['chance'], $_SESSION['progress']))
                                     $crime->playerWin($currentCrime['maxReward'], $currentCrime['maxReward'], $connect, $_SESSION['id']);
 
-                                else $crime->playerLose($currentCrime['penaltyTime'], $connect);
+                                else $moveToPrison->handle($currentCrime['penaltyTime'], $connect, $_SESSION['id']);
                                 
                                 break;
                         }

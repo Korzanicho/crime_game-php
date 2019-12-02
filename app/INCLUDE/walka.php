@@ -1,31 +1,38 @@
+<?php
+	session_start();
+	require_once('../class/dbCommunication.php');
+	require_once('../class/playerAccess.php');
+	require_once('../class/actions/actionFight.php');
+
+	$disableAction = new BlockAction;
+
+	$playerBlockingAccess = new PlayerAccess;
+	$playerBlockingAccess->handle(true);
+
+	$opponents = [
+		[
+			'slug'         => 'emeryt',
+			'name'         => 'Emeryt', 
+			'maxReward'    => rand(5, 15),
+			'power'		   => rand(5, 15),
+			'defence'	   => rand(5, 15),
+			'fast'		   => rand(5, 15)
+		],
+	
+	];
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<?php 
-		session_start();
 		include("head.php");
-		if(!isset($_SESSION['zalogowany'])){
-			header('Location: ./index.php');
-			exit();
-		}
-
-		//Jeżeli jesteś w szpitalu
-		if(isset($_SESSION['szpitalstop']) && $_SESSION['szpitalstop']){
-			header('Location: ./szpital.php');
-			exit();
-		}
-		//Jeżeli jesteś w więzieniu
-		if(isset($_SESSION['wiezieniestop']) && $_SESSION['wiezieniestop']){
-			header('Location: ./wiezienie.php');
-			exit();
-		}
-
 		require_once "connect.php";
 		?>
 </head>
 <body>
 
-	<div class=container>
+	<div class='container'>
 		<header>
 			<?php include("header.php")?>
         </header>
@@ -143,6 +150,7 @@ $id = $_SESSION["id"];
 									
 									else
 										$_SESSION['zdrowie']=$az;
+									
 									$zdrowie=$_SESSION['zdrowie'];
 									$kwerenda = "UPDATE users SET progress=$prog, zdrowie=$zdrowie, hajs=$twojhajs  WHERE id=$id ;";
 									$update = mysqli_query(connect(), $kwerenda);

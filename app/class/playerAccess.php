@@ -1,4 +1,4 @@
-<?php
+<?php 	
 	/**
 	* Class PlayerAccess.
 	* Class for moving player from blocking pages
@@ -8,6 +8,41 @@
 		function __construct()
 		{
 			//
+		}
+
+		/**
+		 * 
+		 * Check current time
+		 * 
+		 */
+		private function currentTime()
+		{
+			$currentTime = new DateTime();
+			return $currentTime;
+		}
+
+		/**
+		 * Check end time
+		 *
+		 * @return DateTime
+		 * 
+		 */
+		private function endTime( $endTime )
+		{
+			$endTime = DateTime::createFromFormat('Y-m-d H:i:s', $endTime);
+			return $endTime;
+		}
+
+		/**
+		 * Comparison times
+		 *
+		 * @return Bool
+		 * 
+		 */
+		private function comparisonTimes($endTime): Bool
+		{
+			if($this->currentTime() < $this->endTime($endTime))	return true;
+			else return false;
 		}
 
 		/**
@@ -29,6 +64,9 @@
 		 */
 		private function isPlayerInHospital()
 		{
+			$this->comparisonTimes($_SESSION['tszpital']) 
+			? $_SESSION['szpitalstop'] = true 
+			: $_SESSION['szpitalstop'] = false;
 			if(isset($_SESSION['szpitalstop']) && $_SESSION['szpitalstop']) return true;
 		}
 
@@ -40,6 +78,9 @@
 		 */
 		private function isPlayerInPrison()
 		{
+			$this->comparisonTimes($_SESSION['twiezienie']) 
+				? $_SESSION['wiezieniestop'] = true 
+				: $_SESSION['wiezieniestop'] = false;
 			if(isset($_SESSION['wiezieniestop']) && $_SESSION['wiezieniestop'])	return true;
 		}
 

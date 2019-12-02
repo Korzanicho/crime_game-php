@@ -46,7 +46,7 @@
         </form>
 
 
-        <?
+        <?php
         if(isset($_SESSION['paczkistop']) && $_SESSION['paczkistop']){
             echo "<p class='lose'>Odebrałeś już paczkę</p>";
             if(isset($_SESSION['odswiezeniepaczek']))
