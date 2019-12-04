@@ -74,7 +74,7 @@ $crimes = [
 </head>
 <body>
 
-	<div class=container>
+	<div class='container'>
 		<header>
 			<?php include("header.php")?>
         </header>

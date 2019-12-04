@@ -2,10 +2,10 @@
 	require_once('../class/addStatistics.php');
 
 	/**
-	* Class ActionCrime.
-	* Class for adding crimes
+	* Class ActionFight.
+	* Class for fights
 	*/
-	class ActionCrime{
+	class ActionFight{
 		
 		function __construct()
 		{
@@ -34,15 +34,8 @@
 		{
 			if($player['speed'] >= $opponent['speed'])
 			{
-				// for($i=0;$i<=100;$i++){
-				// 	$opponent['defence']-=$player['power'];
-				// 	if($opponent['defence']<=0) return $player['defence'];
 
-				// 	$player['defence']-=$opponent['power'];
-				// 	if($player['defence']<=0) return 0;
-				// }
-
-				while($player['defence'] <= 0 || $opponent['defence'] <= 0){
+				while($player['defence'] >= 0 || $opponent['defence'] >= 0){
 					$opponent['defence']-=$player['power'];
 					if($opponent['defence']<=0) return $player['defence'];
 
@@ -52,7 +45,7 @@
 
 			}
 			else{
-				while($player['defence'] <= 0 || $opponent['defence'] <= 0){
+				while($player['defence'] >= 0 || $opponent['defence'] >= 0){
 					$player['defence']-=$opponent['power'];
 					if($player['defence']<=0) return 0;
 
@@ -62,46 +55,47 @@
 			}
 		}
 
-		public function result($playerDefence)
+		private function result($playerDefence, $maxMoney, $maxProgress, $connect, $id)
 		{
 			if($playerDefence>0){
-				echo 'wygrałeś';
+				$this->playerWin($maxMoney, $maxProgress, $connect, $id);
+				if($playerDefence<100){
+					$addStatistics = new AddStatistics;
+					$addStatistics->handle('zdrowie', -$_SESSION['zdrowie']+$playerDefence, 'zdrowie', $connect, $id);
+					$_SESSION['zdrowie'] = $playerDefence;
+				}
 			}
-			else echo 'przegrałeś';
+			else $this->playerLose( $connect, $id );
 		}
 
-		// public function playerWin( Int $maxMoney = 0, Int $maxProgress = 0, $connect, Int $id = 0): void
-		// {
-		// 	$money = rand(0, $maxMoney);
-		// 	$progress = rand(0, $maxProgress);
-		// 	$addStatistics = new AddStatistics;
-		// 	$addStatistics->handle($_SESSION['hajs'], $money, 'hajs', $connect, $id);
-		// 	$addStatistics->handle($_SESSION['progress'], $progress, 'hajs', $connect, $id);
-		// 	echo "<p class='success'>Udało Ci się, zyskałeś $money PLN i $progress do szacunku</p>";
-		// }
+		private function playerWin( Int $maxMoney = 0, Int $maxProgress = 0, $connect, Int $id = 0): void
+		{
+			$money = rand(0, $maxMoney);
+			$progress = rand(0, $maxProgress);
+			$addStatistics = new AddStatistics;
+			$addStatistics->handle('hajs', $money, 'hajs', $connect, $id);
+			$addStatistics->handle('progress', $progress, 'progress', $connect, $id);
+			echo "<p class='success'>Udało Ci się, zyskałeś $money PLN i $progress do szacunku</p>";
+		}
 
-		// public function playerLose( Int $time = 0, $connect ): void
-		// {
-		// 	$id = $_SESSION["id"];
-
-		// 	$query = "UPDATE users SET twiezienie=now()+INTERVAL $time SECOND WHERE id=$id ;";
-
-		// 	$connect->update($query);
-		// 	$timeToEnd = $connect->select("SELECT twiezienie FROM users WHERE id=$id");
-		// 	$_SESSION['twiezienie'] = $timeToEnd['twiezienie'];
-
-		// 	$_SESSION['wiezieniestop']=true;
-		// 	echo "<p class='lose'>Trafiasz do więzienia na ".$time." sekund!</p>";
-		// }
+		public function playerLose( $connect, $id ): void
+		{
+			$addStatistics = new AddStatistics;
+			$addStatistics->handle('zdrowie', -$_SESSION['zdrowie'], 'zdrowie', $connect, $id);
+			echo "<p class='lose'>Ale lipa, przegrałeś. Leć do szpitala bo bez zdrowia jesteś łatwym celem dla innych graczy</p>";
+		}
 
 		public function handle($opponentPower, $opponentDefence, $opponentSpeed, 
-			$playerPower, $playerDefence, $playerSpeed){
+			$playerPower, $playerDefence, $playerSpeed, $maxMoney, $maxProgress, $connect, $id){
 			$this->result(
 				$this->fight(
-					getOpponentStatistics($opponentPower, $opponentDefence, $opponentSpeed),
-					getPlayerStatistics($playerPower, $playerDefence, $playerSpeed)
-				)
-				)
+					$this->getOpponentStatistics($opponentPower, $opponentDefence, $opponentSpeed),
+					$this->getPlayerStatistics($playerPower, $playerDefence, $playerSpeed)
+				), $maxMoney, 
+				$maxProgress, 
+				$connect, 
+				$id
+				);
 		}
 	}
 ?>

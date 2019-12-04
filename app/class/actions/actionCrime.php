@@ -32,8 +32,8 @@
 			$money = rand(0, $maxMoney);
 			$progress = rand(0, $maxProgress);
 			$addStatistics = new AddStatistics;
-			$addStatistics->handle($_SESSION['hajs'], $money, 'hajs', $connect, $id);
-			$addStatistics->handle($_SESSION['progress'], $progress, 'hajs', $connect, $id);
+			$addStatistics->handle('hajs', $money, 'hajs', $connect, $id);
+			$addStatistics->handle('progress', $progress, 'progress', $connect, $id);
 			echo "<p class='success'>Udało Ci się, zyskałeś $money PLN i $progress do szacunku</p>";
 		}
 
