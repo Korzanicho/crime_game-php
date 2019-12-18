@@ -138,6 +138,8 @@
 									break;
 							}
 						}
+
+						$connect->disconnect();
 				}
 			}
 			?>

@@ -1,8 +1,9 @@
 <?php
+
 session_start();
+require_once('../class/actions/ActionCrime.php');
 require_once('../class/dbCommunication.php');
 require_once('../class/playerAccess.php');
-require_once('../class/actions/actionCrime.php');
 require_once('../class/disableActions.php');
 require_once('../class/playerAccessTime.php');
 require_once('../class/moveToPrison.php');

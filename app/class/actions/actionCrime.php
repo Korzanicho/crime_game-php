@@ -1,5 +1,6 @@
 <?php
 	require_once('../class/addStatistics.php');
+	
 
 	/**
 	* Class ActionCrime.

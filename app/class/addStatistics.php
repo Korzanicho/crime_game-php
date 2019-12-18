@@ -1,4 +1,4 @@
-<?php
+<?php	
 	/**
 	* Class AddStatistics.
 	* Class for adding statistic for player
